@@ -1,0 +1,23 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+<div class='container-fluid'>
+  <div class='row align-items-center' style='height: 700px'>
+    <div class='col-md-8'>
+      <img class='rounded mx-auto my-auto d-block' src='https://wallpapercave.com/wp/wp2638362.jpg' height='600px'>
+    </div>
+    <div class='col-md-4'>
+      <h2 class='h4 text-center mb-3'>Sign in to Your Account</h2>
+      <div class='container w-50 d-flex jusitfy-content-center'>
+        <form method='post' aciton='\'>
+          {% csrf_token %}
+          {{form.as_div}}
+          <button type="submit" class="btn btn-primary ms-5 mt-3">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
